@@ -1,0 +1,14 @@
+.venv/
+natsir-env/
+
+.env
+
+__pycache__/
+*.pyc
+
+.pytest_cache/
+
+test-results/
+reports/
+allure-reports/
+allure-report/
