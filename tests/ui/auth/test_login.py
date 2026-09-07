@@ -1,6 +1,7 @@
 from playwright.sync_api import expect
 from config.settings import Settings
 from data.login_data import LoginExpected
+from data.login_data import(INVALID_LOGIN_DATA, LoginExpected)
 
 import pytest
 
@@ -26,10 +27,20 @@ def test_login_positive(
     
     expect(products_page.products_title).to_have_text(LoginExpected.PRODUCTS_TITLE)
 
-    
-def test_login_invalid_password(
+
+@pytest.mark.negative
+@pytest.mark.regression
+
+@pytest.mark.parametrize("email,password, error_message",
+    INVALID_LOGIN_DATA
+)
+
+def test_login_negative(
     login_page,
-    credentials
+    credentials,
+    email,
+    password,
+    error_message
 ):
     
     login_page.open_login_page()
