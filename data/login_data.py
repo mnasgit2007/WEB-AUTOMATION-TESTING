@@ -4,8 +4,8 @@ class LoginExpected:
     
     USERNAME = "uno"
     
-    PRODUCTS_TITTLE = (
-        "TestApp -  Product Dashboard"
+    PRODUCTS_TITLE = (
+        "TestApp - Product Dashboard"
     )
     
     INVALID_CREDENTIALS = (

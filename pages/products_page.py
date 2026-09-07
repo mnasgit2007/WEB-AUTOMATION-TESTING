@@ -8,6 +8,6 @@ class ProductPage(BasePage):
         
         self.user_email = (page.get_by_test_id("user-email"))
         
-        self.products_title = (page.get_by_test_id("product-title"))
+        self.products_title = (page.get_by_test_id("products-title"))
         
         
